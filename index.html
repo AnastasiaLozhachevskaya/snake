@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Snake</title>
+	<style>
+		body {
+			background-color: white;
+			position: relative;
+		}
+		#sHead {
+			width: 10px;
+			height: 10px;
+			background-color: black;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		#container {
+			width: 250px;
+			height: 250px;
+			position: relative;
+			border: 1px solid #000;
+			margin: 0 auto;
+		}
+		.goal {
+			width: 10px;
+			height: 10px;
+			background: black;
+			position: absolute;
+			-moz-transition:all .5s ease-in-out;
+			-webkit-transition:all .5s ease-in-out;
+			-o-transition:all .5s ease-in-out;
+			-ms-transition:all .5s ease-in-out;
+			transition:all .5s ease-in-out;
+			-moz-animation:blink normal 1s infinite ease-in-out;
+			-webkit-animation:blink normal 1s infinite ease-in-out;
+			-ms-animation:blink normal 1s infinite ease-in-out;
+			animation:blink normal 1s infinite ease-in-out;
+		}
+
+		@-moz-keyframes blink {0%{opacity:1;} 50%{opacity:0;} 100%{opacity:1;}}
+		@-webkit-keyframes blink {0%{opacity:1;} 50%{opacity:0;} 100%{opacity:1;}}
+		@-ms-keyframes blink {0%{opacity:1;} 50%{opacity:0;} 100%{opacity:1;}}
+		@keyframes blink {0%{opacity:1;} 50%{opacity:0;} 100%{opacity:1;}}
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="sHead"></div>
+	</div>
+	<script src="snake.js"></script>
+</body>
+</html>
